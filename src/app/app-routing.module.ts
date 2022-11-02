@@ -7,4 +7,15 @@ const routes: Routes = [];
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule { 
+  public vRecipe:boolean=false;
+  public vShopping:boolean=false;
+
+  setRecipeVisible(recipe:boolean){
+    this.vRecipe=recipe;
+  }
+
+  setShoppingVisible(shopping:boolean){
+    this.vShopping=shopping;
+  }
+}
