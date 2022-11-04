@@ -8,14 +8,5 @@ const routes: Routes = [];
   exports: [RouterModule]
 })
 export class AppRoutingModule { 
-  public vRecipe:boolean=false;
-  public vShopping:boolean=false;
-
-  setRecipeVisible(recipe:boolean){
-    this.vRecipe=recipe;
-  }
-
-  setShoppingVisible(shopping:boolean){
-    this.vShopping=shopping;
-  }
+  
 }

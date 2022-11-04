@@ -1,4 +1,5 @@
 import { Component, OnInit,Input } from '@angular/core';
+import { RecipesManager } from 'src/app/services/recipes.service';
 
 import { Recipes } from '../recipe.model';
 
@@ -8,15 +9,13 @@ import { Recipes } from '../recipe.model';
   styleUrls: ['./recipe-detail.component.css']
 })
 export class RecipeDetailComponent implements OnInit {
-
-  constructor() { }
   @Input() recipe:Recipes;
+  constructor() { }
+ 
 
   
   
   
   ngOnInit(): void {
-    
-    }
-
+  }
 }

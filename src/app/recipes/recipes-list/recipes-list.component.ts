@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { RecipesManager } from 'src/app/services/recipes.service';
 import { Recipes } from '../recipe.model';
 
 @Component({
@@ -7,24 +8,18 @@ import { Recipes } from '../recipe.model';
   styleUrls: ['./recipes-list.component.css']
 })
 export class RecipesListComponent implements OnInit {
-  @Output() recipeWasSelected=new EventEmitter<Recipes>();
+  recipeWasSelected:Recipes;
   
-  recipes:Recipes[]=[
-    new Recipes('Test recipe','This should be a description', 'https://media.istockphoto.com/photos/cheeseburger-isolated-on-white-picture-id1157515115?k=20&m=1157515115&s=612x612&w=0&h=1-tuF1ovimw3DuivpApekSjJXN5-vc97-qBY5EBOUts='),
-    new Recipes('Test khglhgljfe','This should be a description', 'https://media.istockphoto.com/photos/cheeseburger-isolated-on-white-picture-id1157515115?k=20&m=1157515115&s=612x612&w=0&h=1-tuF1ovimw3DuivpApekSjJXN5-vc97-qBY5EBOUts='),
-    new Recipes('Test recipe','This should be a description', 'https://media.istockphoto.com/photos/cheeseburger-isolated-on-white-picture-id1157515115?k=20&m=1157515115&s=612x612&w=0&h=1-tuF1ovimw3DuivpApekSjJXN5-vc97-qBY5EBOUts=')
-  ];
+  recipes:Recipes[];
 
  
   
-  constructor() { }
+  constructor(private recipeManager:RecipesManager) { }
   
   ngOnInit(): void {
+    this.recipes=this.recipeManager.recipesList;
   }
 
-  onRecipeSelected(recipe:Recipes){
-    
-    this.recipeWasSelected.emit(recipe);
-  }
+ 
 
 }

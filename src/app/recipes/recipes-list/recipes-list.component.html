@@ -9,7 +9,7 @@
     <div class="col-sm-12">
         <hr>
         
-        <app-recipe-item *ngFor="let recipeEl of recipes"   [recipeNew]="recipeEl"  (recipeSelected)="onRecipeSelected(recipeEl)"></app-recipe-item> 
+        <app-recipe-item *ngFor="let recipeEl of recipes  let i=index  " [recipeNew]="recipeEl" [selectedIndex]=i  (recipeSelected)="onRecipeSelected(recipeEl)"></app-recipe-item> 
 
     </div>
 </div>

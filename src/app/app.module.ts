@@ -12,6 +12,9 @@ import { RecipeItemComponent } from './recipes/recipes-list/recipe-item/recipe-i
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { FormsModule } from '@angular/forms';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
+import { HighlightDirective } from './services/highlight.directice';
+import { DropdownDirective } from './shared/dropdown.directive';
+import { RecipesManager } from './services/recipes.service';
 
 
 
@@ -25,6 +28,8 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
     RecipeItemComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
+    HighlightDirective,
+    DropdownDirective
    
     
   ],
